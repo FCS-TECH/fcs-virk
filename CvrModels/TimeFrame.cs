@@ -1,12 +1,12 @@
 ﻿// ***********************************************************************
-// Assembly         : FCS.Virk
+// Assembly         : Inno.Api
 // Author           : FH
-// Created          : 02-21-2022
+// Created          : 01-01-2022
 //
 // Last Modified By : FH
-// Last Modified On : 02-24-2022
+// Last Modified On : 02-22-2022
 // ***********************************************************************
-// <copyright file="Periode.cs" company="FCS">
+// <copyright file="TimeFrame.cs" company="FCS">
 //    Copyright (C) 2022 FCS Frede's Computer Services.
 //    This program is free software: you can redistribute it and/or modify
 //    it under the terms of the GNU Affero General Public License as
@@ -23,22 +23,22 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-namespace FCS.Virk.VrModels
+namespace FCS.Virk.CvrModels
 {
     /// <summary>
-    /// Class Periode.
+    /// Class CvrPeriod.
     /// </summary>
-    public class Periode
+    public class TimeFrame
     {
         /// <summary>
-        /// Gets or sets the gyldig fra.
+        /// Gets or sets the start date.
         /// </summary>
-        /// <value>The gyldig fra.</value>
-        public string GyldigFra { get; set; } = "";
+        /// <value>The start date.</value>
+        public string StartDate { get; set; } = "";
         /// <summary>
-        /// Gets or sets the gyldig til.
+        /// Gets or sets the end date.
         /// </summary>
-        /// <value>The gyldig til.</value>
-        public string GyldigTil { get; set; } = "";
+        /// <value>The end date.</value>
+        public string EndDate { get; set; } = "";
     }
 }
