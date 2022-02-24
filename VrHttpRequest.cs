@@ -19,14 +19,15 @@
 //    GNU Affero General Public License for more details.
 //
 //    You should have received a copy of the GNU Affero General Public License
-//    along with this program.  If not, see <https://www.gnu.org/licenses/>
+//    along with this program.  If not, see [https://www.gnu.org/licenses]
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
 using System.Net.Http.Headers;
 using System.Text;
 
-namespace FCS.Virk
+namespace FCS.Lib.Virk
 {
     /// <summary>
     /// Class VrHttpRequest.

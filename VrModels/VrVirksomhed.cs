@@ -4,7 +4,7 @@
 // Created          : 02-21-2022
 //
 // Last Modified By : FH
-// Last Modified On : 02-21-2022
+// Last Modified On : 02-24-2022
 // ***********************************************************************
 // <copyright file="VrVirksomhed.cs" company="FCS">
 //    Copyright (C) 2022 FCS Frede's Computer Services.
@@ -19,11 +19,11 @@
 //    GNU Affero General Public License for more details.
 //
 //    You should have received a copy of the GNU Affero General Public License
-//    along with this program.  If not, see <https://www.gnu.org/licenses/>
+//    along with this program.  If not, see [https://www.gnu.org/licenses]
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-namespace FCS.Virk.VrModels
+namespace FCS.Lib.Virk.VrModels
 {
     /// <summary>
     /// Class VrVirksomhed.
