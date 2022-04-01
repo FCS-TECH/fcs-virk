@@ -26,15 +26,8 @@
 
 namespace FCS.Lib.Virk.VrModels
 {
-    /// <summary>
-    /// Class NyesteNavn.
-    /// </summary>
     public class NyesteNavn
     {
-        /// <summary>
-        /// Gets or sets the navn.
-        /// </summary>
-        /// <value>The navn.</value>
         public string Navn { get; set; } = "";
     }
 }

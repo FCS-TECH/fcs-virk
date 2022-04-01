@@ -25,25 +25,10 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk.VrModels
 {
-    /// <summary>
-    /// Class VirksomhedsStatus.
-    /// </summary>
     public class VirksomhedsStatus
     {
-        /// <summary>
-        /// Gets or sets the sidst opdateret.
-        /// </summary>
-        /// <value>The sidst opdateret.</value>
         public string SidstOpdateret { get; set; } = "";
-        /// <summary>
-        /// Gets or sets the status.
-        /// </summary>
-        /// <value>The status.</value>
         public string Status { get; set; } = "";
-        /// <summary>
-        /// Gets or sets the periode.
-        /// </summary>
-        /// <value>The periode.</value>
         public Periode Periode { get; set; } = new();
     }
 }

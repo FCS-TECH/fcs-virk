@@ -25,20 +25,9 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk.VrModels
 {
-    /// <summary>
-    /// Class Periode.
-    /// </summary>
     public class Periode
     {
-        /// <summary>
-        /// Gets or sets the gyldig fra.
-        /// </summary>
-        /// <value>The gyldig fra.</value>
         public string GyldigFra { get; set; } = "";
-        /// <summary>
-        /// Gets or sets the gyldig til.
-        /// </summary>
-        /// <value>The gyldig til.</value>
         public string GyldigTil { get; set; } = "";
     }
 }

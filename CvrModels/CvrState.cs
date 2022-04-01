@@ -25,25 +25,10 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk.CvrModels
 {
-    /// <summary>
-    /// Class CvrStatus.
-    /// </summary>
     public class CvrState
     {
-        /// <summary>
-        /// Gets or sets the last update.
-        /// </summary>
-        /// <value>The last update.</value>
         public string LastUpdate { get; set; } = "";
-        /// <summary>
-        /// Gets or sets the status.
-        /// </summary>
-        /// <value>The status.</value>
-        public string State { get; set; } = "INAKTIV";
-        /// <summary>
-        /// Gets or sets the period.
-        /// </summary>
-        /// <value>The period.</value>
+        public string State { get; set; } = "";
         public TimeFrame TimeFrame { get; set; } = new();
     }
 }

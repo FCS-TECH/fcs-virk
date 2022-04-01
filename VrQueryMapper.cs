@@ -28,16 +28,8 @@ using Newtonsoft.Json.Linq;
 
 namespace FCS.Lib.Virk
 {
-    /// <summary>
-    /// Class VrQueryMapper.
-    /// </summary>
     public class VrQueryMapper
     {
-        /// <summary>
-        /// Vrs the map query.
-        /// </summary>
-        /// <param name="query">The query.</param>
-        /// <returns>JObject.</returns>
         public JObject VrMapQuery(VrQuery query)
         {
             if (string.IsNullOrWhiteSpace(query.VatNumber))
@@ -53,7 +45,8 @@ namespace FCS.Lib.Virk
                             "Vrvirksomhed.virksomhedMetadata.nyesteBeliggenhedsadresse.husnummerTil",
                             "Vrvirksomhed.virksomhedMetadata.nyesteBeliggenhedsadresse.postnummer",
                             "Vrvirksomhed.virksomhedMetadata.nyesteBeliggenhedsadresse.postdistrikt",
-                            "Vrvirksomhed.virksomhedsstatus")
+                            "Vrvirksomhed.virksomhedsstatus",
+                            "Vrvirksomhed.livsforloeb")
                     ),
                     new JProperty("query",
                         new JObject(new JProperty("bool",
@@ -89,7 +82,8 @@ namespace FCS.Lib.Virk
                         "Vrvirksomhed.virksomhedMetadata.nyesteBeliggenhedsadresse.husnummerTil",
                         "Vrvirksomhed.virksomhedMetadata.nyesteBeliggenhedsadresse.postnummer",
                         "Vrvirksomhed.virksomhedMetadata.nyesteBeliggenhedsadresse.postdistrikt",
-                        "Vrvirksomhed.virksomhedsstatus")
+                        "Vrvirksomhed.virksomhedsstatus",
+                        "Vrvirksomhed.livsforloeb")
                 ),
                 new JProperty("query",
                     new JObject(new JProperty("term",

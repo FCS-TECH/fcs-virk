@@ -25,20 +25,9 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk.VrModels
 {
-    /// <summary>
-    /// Class VirksomhedMetadata.
-    /// </summary>
     public class VirksomhedMetadata
     {
-        /// <summary>
-        /// Gets or sets the nyeste navn.
-        /// </summary>
-        /// <value>The nyeste navn.</value>
         public NyesteNavn NyesteNavn { get; set; } = new();
-        /// <summary>
-        /// Gets or sets the nyeste beliggenhedsadresse.
-        /// </summary>
-        /// <value>The nyeste beliggenhedsadresse.</value>
         public NyesteBeliggenhedsadresse NyesteBeliggenhedsadresse { get; set; } = new();
     }
 }

@@ -28,25 +28,10 @@ using System.Net;
 
 namespace FCS.Lib.Virk
 {
-    /// <summary>
-    /// Class VrResponseView.
-    /// </summary>
     public class VrResponseView
     {
-        /// <summary>
-        /// Gets or sets the code.
-        /// </summary>
-        /// <value>The code.</value>
         public HttpStatusCode Code { get; set; }
-        /// <summary>
-        /// Gets or sets a value indicating whether this instance is success status code.
-        /// </summary>
-        /// <value><c>true</c> if this instance is success status code; otherwise, <c>false</c>.</value>
         public bool IsSuccessStatusCode { get; set; }
-        /// <summary>
-        /// Gets or sets the message.
-        /// </summary>
-        /// <value>The message.</value>
         public string Message { get; set; } = "";
     }
 }

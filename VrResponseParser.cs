@@ -30,16 +30,8 @@ using Newtonsoft.Json.Linq;
 
 namespace FCS.Lib.Virk
 {
-    /// <summary>
-    /// Class VrResponseParser.
-    /// </summary>
     public class VrResponseParser
     {
-        /// <summary>
-        /// Parses the vr response.
-        /// </summary>
-        /// <param name="jsonData">The json data.</param>
-        /// <returns>List&lt;System.Nullable&lt;VrVirksomhed&gt;&gt;.</returns>
         public List<VrVirksomhed?> ParseVrResponse(string jsonData)
         {
             var result = new List<VrVirksomhed?>();

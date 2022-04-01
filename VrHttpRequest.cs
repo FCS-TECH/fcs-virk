@@ -29,18 +29,8 @@ using System.Text;
 
 namespace FCS.Lib.Virk
 {
-    /// <summary>
-    /// Class VrHttpRequest.
-    /// </summary>
     public class VrHttpRequest
     {
-        /// <summary>
-        /// Get response as an asynchronous operation.
-        /// </summary>
-        /// <param name="endpoint">The endpoint.</param>
-        /// <param name="jsonData">The json data.</param>
-        /// <param name="auth">The authentication.</param>
-        /// <returns>A Task&lt;VrResponseView&gt; representing the asynchronous operation.</returns>
         public async Task<VrResponseView> GetResponseAsync(string endpoint, string jsonData, string auth)
         {
             using var content = new StringContent(jsonData, Encoding.UTF8, "application/json");

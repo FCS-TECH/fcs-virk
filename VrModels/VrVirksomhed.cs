@@ -25,26 +25,11 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk.VrModels
 {
-    /// <summary>
-    /// Class VrVirksomhed.
-    /// </summary>
     public class VrVirksomhed
     {
-        /// <summary>
-        /// Gets or sets the CVR nummer.
-        /// </summary>
-        /// <value>The CVR nummer.</value>
         public string CvrNummer { get; set; } = "";
-        /// <summary>
-        /// Gets or sets the virksomheds status.
-        /// </summary>
-        /// <value>The virksomheds status.</value>
         public List<VirksomhedsStatus> VirksomhedsStatus { get; set; } = new ();
-        /// <summary>
-        /// Gets or sets the virksomhed metadata.
-        /// </summary>
-        /// <value>The virksomhed metadata.</value>
         public VirksomhedMetadata VirksomhedMetadata { get; set; } = new();
-
+        public List<LivsforloebModel> Livsforloeb { get; set; } = new();
     }
 }

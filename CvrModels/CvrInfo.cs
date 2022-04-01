@@ -26,45 +26,15 @@
 
 namespace FCS.Lib.Virk.CvrModels
 {
-    /// <summary>
-    /// Class CvrCompany.
-    /// </summary>
     public class CvrInfo
     {
-        /// <summary>
-        /// Gets or sets the vat number.
-        /// </summary>
-        /// <value>The vat number.</value>
         public string VatNumber { get; set; } = "";
-        /// <summary>
-        /// Gets or sets the name.
-        /// </summary>
-        /// <value>The name.</value>
         public string Name { get; set; } = "";
-        /// <summary>
-        /// Gets or sets the name of the co.
-        /// </summary>
-        /// <value>The name of the co.</value>
         public string CoName { get; set; } = "";
-        /// <summary>
-        /// Gets or sets the address.
-        /// </summary>
-        /// <value>The address.</value>
         public string Address { get; set; } = "";
-        /// <summary>
-        /// Gets or sets the city.
-        /// </summary>
-        /// <value>The city.</value>
         public string City { get; set; } = "";
-        /// <summary>
-        /// Gets or sets the zip code.
-        /// </summary>
-        /// <value>The zip code.</value>
         public string ZipCode { get; set; } = "";
-        /// <summary>
-        /// Gets or sets the status.
-        /// </summary>
-        /// <value>The status.</value>
         public List<CvrState> States { get; set; } = new();
+        public List<LifeCycle> LifeCycles { get; set; } = new();
     }
 }

@@ -25,40 +25,13 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk.VrModels
 {
-    /// <summary>
-    /// Class NyesteBeliggenhedsadresse.
-    /// </summary>
     public class NyesteBeliggenhedsadresse
     {
-        /// <summary>
-        /// Gets or sets the husnummer fra.
-        /// </summary>
-        /// <value>The husnummer fra.</value>
         public int? HusnummerFra { get; set; }
-        /// <summary>
-        /// Gets or sets the husnummer til.
-        /// </summary>
-        /// <value>The husnummer til.</value>
         public int? HusnummerTil { get; set; }
-        /// <summary>
-        /// Gets or sets the postnummer.
-        /// </summary>
-        /// <value>The postnummer.</value>
         public int? Postnummer { get; set; }
-        /// <summary>
-        /// Gets or sets the vejnavn.
-        /// </summary>
-        /// <value>The vejnavn.</value>
         public string Vejnavn { get; set; } = "";
-        /// <summary>
-        /// Gets or sets the co navn.
-        /// </summary>
-        /// <value>The co navn.</value>
         public string CoNavn { get; set; } = "";
-        /// <summary>
-        /// Gets or sets the post distrikt.
-        /// </summary>
-        /// <value>The post distrikt.</value>
         public string PostDistrikt { get; set; } = "";
     }
 }

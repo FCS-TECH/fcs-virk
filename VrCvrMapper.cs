@@ -29,16 +29,8 @@ using FCS.Lib.Virk.VrModels;
 
 namespace FCS.Lib.Virk
 {
-    /// <summary>
-    /// Class VrCvrMapper.
-    /// </summary>
     public class VrCvrMapper
     {
-        /// <summary>
-        /// Maps the vr to CVR.
-        /// </summary>
-        /// <param name="vrVirk">The vr virk.</param>
-        /// <returns>CvrInfo.</returns>
         public CvrInfo MapVrToCvr(VrVirksomhed vrVirk)
         {
             var c = new CvrInfo
@@ -61,7 +53,7 @@ namespace FCS.Lib.Virk
                              TimeFrame = new TimeFrame
                              {
                                  StartDate = vrStatus.Periode.GyldigFra,
-                                 EndDate = vrStatus.Periode.GyldigTil
+                                 EndDate = !string.IsNullOrWhiteSpace(vrStatus.Periode.GyldigTil) ? vrStatus.Periode.GyldigTil : ""
                              }
                          }))
                 {
@@ -73,6 +65,37 @@ namespace FCS.Lib.Virk
                 c.States.Add(new CvrState());
             }
 
+            if (vrVirk.Livsforloeb.Any())
+            {
+                foreach (var lc in vrVirk.Livsforloeb.Select(
+                             vrCourse => new LifeCycle
+                             {
+                                 LastUpdate = vrCourse.SidstOpdateret,
+                                 TimeFrame = new TimeFrame
+                                 {
+                                     StartDate = vrCourse.Periode.GyldigFra,
+                                     EndDate = !string.IsNullOrWhiteSpace(vrCourse.Periode.GyldigTil) ? vrCourse.Periode.GyldigTil : ""
+                                 }
+                             }
+                             ))
+                {
+                    c.LifeCycles.Add(lc);
+                }
+            }
+            else
+            {
+                c.LifeCycles.Add(new LifeCycle());
+            }
+
+            if (!string.IsNullOrWhiteSpace(c.States[c.States.Count - 1].State)) return c;
+
+            var sc = c.States.Count - 1;
+            var lcc = c.LifeCycles.Count - 1;
+            c.States[sc].LastUpdate = c.LifeCycles[lcc].LastUpdate;
+            c.States[sc].TimeFrame.StartDate = c.LifeCycles[lcc].TimeFrame.StartDate;
+            c.States[sc].TimeFrame.EndDate = c.LifeCycles[lcc].TimeFrame.EndDate;
+
+            c.States[sc].State = string.IsNullOrWhiteSpace(c.LifeCycles[c.LifeCycles.Count - 1].TimeFrame.EndDate) ? "NORMAL" : "LUKKET";
             return c;
         }
     }
