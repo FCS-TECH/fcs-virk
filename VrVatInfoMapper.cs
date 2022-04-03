@@ -24,16 +24,17 @@
 // <summary></summary>
 // ***********************************************************************
 
-using FCS.Lib.Virk.CvrModels;
+using System.Globalization;
+using FCS.Lib.Common;
 using FCS.Lib.Virk.VrModels;
 
 namespace FCS.Lib.Virk
 {
-    public class VrCvrMapper
+    public class VrVatInfoMapper
     {
-        public CvrInfo MapVrToCvr(VrVirksomhed vrVirk)
+        public VatInfoDto MapVrToCvm(VrVirksomhed vrVirk)
         {
-            var c = new CvrInfo
+            var c = new VatInfoDto
             {
                 Name = vrVirk.VirksomhedMetadata.NyesteNavn.Navn,
                 Address =
@@ -41,12 +42,13 @@ namespace FCS.Lib.Virk
                 CoName = vrVirk.VirksomhedMetadata.NyesteBeliggenhedsadresse.CoNavn,
                 ZipCode = vrVirk.VirksomhedMetadata.NyesteBeliggenhedsadresse.Postnummer.ToString(),
                 City = vrVirk.VirksomhedMetadata.NyesteBeliggenhedsadresse.PostDistrikt,
-                VatNumber = vrVirk.CvrNummer
+                VatNumber = vrVirk.CvrNummer,
+                RequestDate = DateTime.Now.ToString(CultureInfo.InvariantCulture)
             };
 
             if (vrVirk.VirksomhedsStatus.Any())
             {
-                foreach (var cs in vrVirk.VirksomhedsStatus.Select(vrStatus => new CvrState
+                foreach (var cs in vrVirk.VirksomhedsStatus.Select(vrStatus => new VatState
                          {
                              State = vrStatus.Status,
                              LastUpdate = vrStatus.SidstOpdateret,
@@ -62,7 +64,7 @@ namespace FCS.Lib.Virk
             }
             else
             {
-                c.States.Add(new CvrState());
+                c.States.Add(new VatState());
             }
 
             if (vrVirk.Livsforloeb.Any())
@@ -94,7 +96,6 @@ namespace FCS.Lib.Virk
             c.States[sc].LastUpdate = c.LifeCycles[lcc].LastUpdate;
             c.States[sc].TimeFrame.StartDate = c.LifeCycles[lcc].TimeFrame.StartDate;
             c.States[sc].TimeFrame.EndDate = c.LifeCycles[lcc].TimeFrame.EndDate;
-
             c.States[sc].State = string.IsNullOrWhiteSpace(c.LifeCycles[c.LifeCycles.Count - 1].TimeFrame.EndDate) ? "NORMAL" : "LUKKET";
             return c;
         }
