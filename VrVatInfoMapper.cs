@@ -32,7 +32,7 @@ namespace FCS.Lib.Virk
 {
     public class VrVatInfoMapper
     {
-        public VatInfoDto MapVrToCvm(VrVirksomhed vrVirk)
+        public VatInfoDto MapVrToCrm(VrVirksomhed vrVirk)
         {
             var c = new VatInfoDto
             {
