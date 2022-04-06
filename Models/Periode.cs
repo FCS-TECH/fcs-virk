@@ -6,7 +6,7 @@
 // Last Modified By : FH
 // Last Modified On : 02-24-2022
 // ***********************************************************************
-// <copyright file="VirksomhedMetadata.cs" company="FCS">
+// <copyright file="Periode.cs" company="FCS">
 //    Copyright (C) 2022 FCS Frede's Computer Services.
 //    This program is free software: you can redistribute it and/or modify
 //    it under the terms of the Affero GNU General Public License as
@@ -23,11 +23,11 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-namespace FCS.Lib.Virk.VrModels
+namespace FCS.Lib.Virk.Models
 {
-    public class VirksomhedMetadata
+    public class Periode
     {
-        public NyesteNavn NyesteNavn { get; set; } = new();
-        public NyesteBeliggenhedsadresse NyesteBeliggenhedsadresse { get; set; } = new();
+        public string GyldigFra { get; set; } = "";
+        public string GyldigTil { get; set; } = "";
     }
 }

@@ -31,7 +31,8 @@ namespace FCS.Lib.Virk
 {
     public class VrHttpRequest
     {
-        public async Task<VrResponseView> GetResponseAsync(string endpoint, string jsonData, string auth)
+        public async Task<VrResponseView> GetResponseAsync(string endpoint, string jsonData, string auth,
+            string userAgent)
         {
             using var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
             using var client = new HttpClient();
@@ -39,6 +40,7 @@ namespace FCS.Lib.Virk
 
             vrRequest.Headers.Authorization = new AuthenticationHeaderValue("Basic", $"{auth}");
             vrRequest.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            vrRequest.Headers.Add("User-Agent", userAgent);
             vrRequest.Content = content;
 
             var response = await client.SendAsync(vrRequest).ConfigureAwait(true);

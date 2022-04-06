@@ -23,7 +23,7 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-namespace FCS.Lib.Virk.VrModels
+namespace FCS.Lib.Virk.Models
 {
     public class VirksomhedsStatus
     {

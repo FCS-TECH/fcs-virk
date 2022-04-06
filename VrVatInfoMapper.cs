@@ -26,7 +26,7 @@
 
 using System.Globalization;
 using FCS.Lib.Common;
-using FCS.Lib.Virk.VrModels;
+using FCS.Lib.Virk.Models;
 
 namespace FCS.Lib.Virk
 {

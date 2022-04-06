@@ -24,7 +24,7 @@
 // <summary></summary>
 // ***********************************************************************
 
-using FCS.Lib.Virk.VrModels;
+using FCS.Lib.Virk.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -32,11 +32,11 @@ namespace FCS.Lib.Virk
 {
     public class VrResponseParser
     {
-        public List<VrVirksomhed?> ParseVrResponse(string jsonData)
+        public List<VrVirksomhed?> ParseVrResponse(string responseData)
         {
             var result = new List<VrVirksomhed?>();
             
-            var cvrObject = JObject.Parse(jsonData);
+            var cvrObject = JObject.Parse(responseData);
             
             var numHits = (int) cvrObject.SelectToken("hits")?.SelectToken("total")!;
             
