@@ -43,7 +43,7 @@ namespace FCS.Lib.Virk
                 ZipCode = vrVirk.VirksomhedMetadata.NyesteBeliggenhedsadresse.Postnummer.ToString(),
                 City = vrVirk.VirksomhedMetadata.NyesteBeliggenhedsadresse.PostDistrikt,
                 VatNumber = vrVirk.CvrNummer,
-                RequestDate = DateTime.Now.ToString(CultureInfo.InvariantCulture)
+                RequestDate = $"{DateTime.Now:yyyy-MM-dd}"
             };
 
             if (vrVirk.VirksomhedsStatus.Any())
