@@ -24,7 +24,6 @@
 // <summary></summary>
 // ***********************************************************************
 
-using System.Globalization;
 using FCS.Lib.Common;
 using FCS.Lib.Virk.Models;
 
