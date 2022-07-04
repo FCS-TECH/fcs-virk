@@ -36,7 +36,8 @@ namespace FCS.Lib.Virk
                 // Search lookup
                 return !string.IsNullOrWhiteSpace(query.StreetName)
                        && !string.IsNullOrWhiteSpace(query.HouseNumber)
-                       && !string.IsNullOrWhiteSpace(query.ZipCode);
+                       && !string.IsNullOrWhiteSpace(query.ZipCode)
+                       && int.TryParse(query.HouseNumber, out _);
             }
             catch
             {

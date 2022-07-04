@@ -25,7 +25,6 @@
 // ***********************************************************************
 
 using FCS.Lib.Common;
-using FCS.Lib.Virk.Models;
 
 namespace FCS.Lib.Virk
 {

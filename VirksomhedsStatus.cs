@@ -6,7 +6,7 @@
 // Last Modified By : FH
 // Last Modified On : 02-24-2022
 // ***********************************************************************
-// <copyright file="NyesteNavn.cs" company="FCS">
+// <copyright file="VirksomhedsStatus.cs" company="FCS">
 //    Copyright (C) 2022 FCS Frede's Computer Services.
 //    This program is free software: you can redistribute it and/or modify
 //    it under the terms of the Affero GNU General Public License as
@@ -23,11 +23,12 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-
-namespace FCS.Lib.Virk.Models
+namespace FCS.Lib.Virk
 {
-    public class NyesteNavn
+    public class VirksomhedsStatus
     {
-        public string Navn { get; set; } = "";
+        public string SidstOpdateret { get; set; } = "";
+        public string Status { get; set; } = "";
+        public Periode Periode { get; set; } = new();
     }
 }
