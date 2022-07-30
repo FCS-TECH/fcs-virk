@@ -32,7 +32,7 @@ namespace FCS.Lib.Virk
     {
         public JObject VrMapQuery(VrQuery query)
         {
-            if (string.IsNullOrWhiteSpace(query.VatNumber))
+            if (string.IsNullOrWhiteSpace(query.VatNumber) && string.IsNullOrWhiteSpace(query.EntityName))
             {
                 return new JObject(
                     new JProperty("_source",
@@ -71,6 +71,27 @@ namespace FCS.Lib.Virk
                     new JProperty("size", 50));
             }
 
+            if (string.IsNullOrWhiteSpace(query.EntityName))
+            {
+                return new JObject(
+                    new JProperty("_source",
+                        new JArray(
+                            "Vrvirksomhed.cvrNummer",
+                            "Vrvirksomhed.virksomhedMetadata.nyesteNavn.navn",
+                            "Vrvirksomhed.virksomhedMetadata.nyesteBeliggenhedsadresse.conavn",
+                            "Vrvirksomhed.virksomhedMetadata.nyesteBeliggenhedsadresse.vejnavn",
+                            "Vrvirksomhed.virksomhedMetadata.nyesteBeliggenhedsadresse.husnummerFra",
+                            "Vrvirksomhed.virksomhedMetadata.nyesteBeliggenhedsadresse.husnummerTil",
+                            "Vrvirksomhed.virksomhedMetadata.nyesteBeliggenhedsadresse.postnummer",
+                            "Vrvirksomhed.virksomhedMetadata.nyesteBeliggenhedsadresse.postdistrikt",
+                            "Vrvirksomhed.virksomhedsstatus",
+                            "Vrvirksomhed.livsforloeb")
+                    ),
+                    new JProperty("query",
+                        new JObject(new JProperty("term",
+                            new JObject(new JProperty("Vrvirksomhed.cvrNummer", query.VatNumber))))));
+            }
+
             return new JObject(
                 new JProperty("_source",
                     new JArray(
@@ -87,7 +108,8 @@ namespace FCS.Lib.Virk
                 ),
                 new JProperty("query",
                     new JObject(new JProperty("term",
-                        new JObject(new JProperty("Vrvirksomhed.cvrNummer", query.VatNumber))))));
+                        new JObject(new JProperty("Vrvirksomhed.virksomhedMetadata.nyesteNavn.navn", query.EntityName))))));
+
 
         }
     }

@@ -9,6 +9,8 @@
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
     <AssemblyVersion>1.0</AssemblyVersion>
     <FileVersion>1.0.0.100</FileVersion>
+    <IsPublishable>False</IsPublishable>
+    <PackageLicenseExpression> AGPL-3.0-or-later</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="NewtonSoft.Json" Version="13.0.1" />
@@ -19,6 +21,10 @@
 
   <ItemGroup>
     <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>
 
 </Project>

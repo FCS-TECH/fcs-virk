@@ -32,8 +32,8 @@ namespace FCS.Lib.Virk
             try
             {
                 // Precise lookup
-                if (!string.IsNullOrWhiteSpace(query.VatNumber)) return true;
-                // Search lookup
+                if (!string.IsNullOrWhiteSpace(query.VatNumber) || !string.IsNullOrWhiteSpace(query.EntityName)) return true;
+                // Address lookup
                 return !string.IsNullOrWhiteSpace(query.StreetName)
                        && !string.IsNullOrWhiteSpace(query.HouseNumber)
                        && !string.IsNullOrWhiteSpace(query.ZipCode)
