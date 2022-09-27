@@ -31,6 +31,11 @@ namespace FCS.Lib.Virk
 {
     public class VrResponseParser
     {
+        /// <summary>
+        /// parse response from danish vat registrar
+        /// </summary>
+        /// <param name="responseData"></param>
+        /// <returns></returns>
         public List<VrVirksomhed?> ParseVrResponse(string responseData)
         {
             var result = new List<VrVirksomhed?>();
@@ -46,13 +51,20 @@ namespace FCS.Lib.Virk
             
             for (var i = 0; i < numHits; i++)
             {
-                var cObject = cvrHits?[i]?["_source"] != null ? (JObject?)cvrHits[i]?["_source"]?["Vrvirksomhed"] : null;
-                
-                var jsonString = JsonConvert.SerializeObject(cObject);
-                
-                var o = JsonConvert.DeserializeObject<VrVirksomhed>(jsonString);
+                try
+                {
+                    var cObject = cvrHits?[i]?["_source"] != null ? (JObject?)cvrHits[i]?["_source"]?["Vrvirksomhed"] : null;
 
-                result.Add(o);
+                    var jsonString = JsonConvert.SerializeObject(cObject);
+
+                    var o = JsonConvert.DeserializeObject<VrVirksomhed>(jsonString);
+
+                    result.Add(o);
+                }
+                catch
+                {
+                    return result;
+                }
             }
 
             return result;

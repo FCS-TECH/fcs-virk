@@ -89,7 +89,9 @@ namespace FCS.Lib.Virk
                     ),
                     new JProperty("query",
                         new JObject(new JProperty("term",
-                            new JObject(new JProperty("Vrvirksomhed.cvrNummer", query.VatNumber))))));
+                            new JObject(new JProperty("Vrvirksomhed.cvrNummer", query.VatNumber))))),
+                    new JProperty("size", 10));
+
             }
 
             return new JObject(
