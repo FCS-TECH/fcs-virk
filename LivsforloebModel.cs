@@ -25,9 +25,19 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// Lifecycle model
+    /// </summary>
     public class LivsforloebModel
     {
+        /// <summary>
+        /// Last registrar update
+        /// </summary>
         public string SidstOpdateret { get; set; } = "";
+        /// <summary>
+        /// Period
+        /// </summary>
+        /// <see cref="Periode"/>
         public Periode Periode { get; set; } = new ();
     }
 }

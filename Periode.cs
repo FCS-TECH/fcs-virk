@@ -25,9 +25,18 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// Period object
+    /// </summary>
     public class Periode
     {
+        /// <summary>
+        /// Valid from
+        /// </summary>
         public string GyldigFra { get; set; } = "";
+        /// <summary>
+        /// Valid to
+        /// </summary>
         public string GyldigTil { get; set; } = "";
     }
 }

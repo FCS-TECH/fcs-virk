@@ -25,10 +25,23 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// VirksomhedsStatus object
+    /// </summary>
     public class VirksomhedsStatus
     {
+        /// <summary>
+        /// Business last updated with registrar
+        /// </summary>
         public string SidstOpdateret { get; set; } = "";
+        /// <summary>
+        /// Business status with registrar
+        /// </summary>
         public string Status { get; set; } = "";
+        /// <summary>
+        /// Period object
+        /// </summary>
+        /// <see cref="Periode"/>
         public Periode Periode { get; set; } = new();
     }
 }

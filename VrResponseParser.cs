@@ -29,13 +29,17 @@ using Newtonsoft.Json.Linq;
 
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// VrResponseParser
+    /// </summary>
     public class VrResponseParser
     {
         /// <summary>
-        /// parse response from danish vat registrar
+        /// Registrar response parser
         /// </summary>
         /// <param name="responseData"></param>
-        /// <returns></returns>
+        /// <returns>List of VrVirksomhed models</returns>
+        /// <see cref="VrVirksomhed"/>
         public List<VrVirksomhed?> ParseVrResponse(string responseData)
         {
             var result = new List<VrVirksomhed?>();

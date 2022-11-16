@@ -28,8 +28,18 @@ using Newtonsoft.Json.Linq;
 
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// VrQueryMapper
+    /// </summary>
+    /// <remarks>Maps the VrQuery object into an Elastic Search JObject</remarks>
     public class VrQueryMapper
     {
+        /// <summary>
+        /// VrMapQuery
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns>Elastic Search JObject</returns>
+        /// <see cref="VrQuery"/>
         public JObject VrMapQuery(VrQuery query)
         {
             if (string.IsNullOrWhiteSpace(query.VatNumber) && string.IsNullOrWhiteSpace(query.EntityName))

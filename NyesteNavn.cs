@@ -26,8 +26,14 @@
 
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// Current name object
+    /// </summary>
     public class NyesteNavn
     {
+        /// <summary>
+        /// Name
+        /// </summary>
         public string Navn { get; set; } = "";
     }
 }

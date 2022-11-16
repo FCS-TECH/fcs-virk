@@ -25,8 +25,17 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// Query validator
+    /// </summary>
     public static class VrQueryValidator
     {
+        /// <summary>
+        /// Validate query
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns>true or false</returns>
+        /// <see cref="VrQuery"/>
         public static bool ValidateVrQuery(VrQuery query)
         {
             try

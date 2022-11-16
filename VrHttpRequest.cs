@@ -29,8 +29,20 @@ using System.Text;
 
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// Registrar http request 
+    /// </summary>
     public class VrHttpRequest
     {
+        /// <summary>
+        /// Async registrar http request
+        /// </summary>
+        /// <param name="endpoint"></param>
+        /// <param name="jsonData"></param>
+        /// <param name="auth"></param>
+        /// <param name="userAgent"></param>
+        /// <returns>VrResponseView object</returns>
+        /// <see cref="VrResponseView"/>
         public async Task<VrResponseView> GetResponseAsync(string endpoint, string jsonData, string auth,
             string userAgent)
         {

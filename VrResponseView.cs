@@ -28,10 +28,22 @@ using System.Net;
 
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// Service response view model
+    /// </summary>
     public class VrResponseView
     {
+        /// <summary>
+        /// Http request status code
+        /// </summary>
         public HttpStatusCode Code { get; set; }
+        /// <summary>
+        /// boolean value indicating success
+        /// </summary>
         public bool IsSuccessStatusCode { get; set; }
+        /// <summary>
+        /// Service response as string
+        /// </summary>
         public string Message { get; set; } = "";
     }
 }

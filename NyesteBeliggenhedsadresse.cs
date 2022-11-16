@@ -25,13 +25,34 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// Current address
+    /// </summary>
     public class NyesteBeliggenhedsadresse
     {
+        /// <summary>
+        /// House number from
+        /// </summary>
         public int? HusnummerFra { get; set; }
+        /// <summary>
+        /// House number to
+        /// </summary>
         public int? HusnummerTil { get; set; }
+        /// <summary>
+        /// Zip code
+        /// </summary>
         public int? Postnummer { get; set; }
+        /// <summary>
+        /// Street name
+        /// </summary>
         public string Vejnavn { get; set; } = "";
+        /// <summary>
+        /// CO name
+        /// </summary>
         public string CoNavn { get; set; } = "";
+        /// <summary>
+        /// Mail district name
+        /// </summary>
         public string PostDistrikt { get; set; } = "";
     }
 }

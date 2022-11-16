@@ -25,12 +25,30 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// Registrar query object
+    /// </summary>
     public class VrQuery
     {
+        /// <summary>
+        /// Vat number
+        /// </summary>
         public string VatNumber { get; set; } = "";
+        /// <summary>
+        /// Street name
+        /// </summary>
         public string StreetName { get; set; } = "";
+        /// <summary>
+        /// House number
+        /// </summary>
         public string HouseNumber { get; set; } = "";
+        /// <summary>
+        /// Zip code
+        /// </summary>
         public string ZipCode { get; set; } = "";
+        /// <summary>
+        /// Entity name
+        /// </summary>
         public string EntityName { get; set; } = "";
     }
 }

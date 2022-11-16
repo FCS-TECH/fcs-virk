@@ -25,9 +25,20 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// Business meta data object
+    /// </summary>
     public class VirksomhedMetadata
     {
+        /// <summary>
+        /// Business current name object
+        /// </summary>
+        /// <see cref="NyesteNavn"/>
         public NyesteNavn NyesteNavn { get; set; } = new();
+        /// <summary>
+        /// Business current address object
+        /// </summary>
+        /// <see cref="NyesteBeliggenhedsadresse"/>
         public NyesteBeliggenhedsadresse NyesteBeliggenhedsadresse { get; set; } = new();
     }
 }

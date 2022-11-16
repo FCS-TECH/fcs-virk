@@ -25,11 +25,30 @@
 // ***********************************************************************
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// Business model with registrar
+    /// </summary>
+    /// <remarks>JSON property 1-1 relation</remarks>
     public class VrVirksomhed
     {
+        /// <summary>
+        /// Vat number
+        /// </summary>
         public string CvrNummer { get; set; } = "";
+        /// <summary>
+        /// Status list
+        /// </summary>
+        /// <see cref="VirksomhedsStatus"/>
         public List<VirksomhedsStatus> VirksomhedsStatus { get; set; } = new ();
+        /// <summary>
+        /// Meta data
+        /// </summary>
+        /// <see cref="VirksomhedMetadata"/>
         public VirksomhedMetadata VirksomhedMetadata { get; set; } = new();
+        /// <summary>
+        /// Company stages
+        /// </summary>
+        /// <see cref="LivsforloebModel"/>
         public List<LivsforloebModel> Livsforloeb { get; set; } = new();
     }
 }

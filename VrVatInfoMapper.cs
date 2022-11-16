@@ -28,8 +28,21 @@ using FCS.Lib.Common;
 
 namespace FCS.Lib.Virk
 {
+    /// <summary>
+    /// Vr Vat Info Mapper
+    /// </summary>
     public class VrVatInfoMapper
     {
+        /// <summary>
+        /// Vr to CRM mapper
+        /// </summary>
+        /// <param name="vrVirk"></param>
+        /// <returns>Vat Info Data Transfer Object</returns>
+        /// <see cref="VatInfoDto"/>
+        /// <see cref="VrVirksomhed"/>
+        /// <see cref="VatState"/>
+        /// <see cref="LifeCycle"/>
+        /// <see cref="TimeFrame"/>
         public VatInfoDto MapVrToCrm(VrVirksomhed vrVirk)
         {
             var c = new VatInfoDto
