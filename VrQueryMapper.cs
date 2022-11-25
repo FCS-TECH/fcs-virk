@@ -42,6 +42,7 @@ namespace FCS.Lib.Virk
         /// <see cref="VrQuery"/>
         public JObject VrMapQuery(VrQuery query)
         {
+            // lookup based on address
             if (string.IsNullOrWhiteSpace(query.VatNumber) && string.IsNullOrWhiteSpace(query.EntityName))
             {
                 return new JObject(
@@ -80,7 +81,7 @@ namespace FCS.Lib.Virk
                                 )))))),
                     new JProperty("size", 50));
             }
-
+            // vat number query
             if (string.IsNullOrWhiteSpace(query.EntityName))
             {
                 return new JObject(
@@ -98,12 +99,12 @@ namespace FCS.Lib.Virk
                             "Vrvirksomhed.livsforloeb")
                     ),
                     new JProperty("query",
-                        new JObject(new JProperty("term",
-                            new JObject(new JProperty("Vrvirksomhed.cvrNummer", query.VatNumber))))),
-                    new JProperty("size", 10));
-
+                        new JObject(new JProperty("term", 
+                            new JObject(new JProperty("Vrvirksomhed.cvrNummer", query.VatNumber))))
+                        )
+                    );
             }
-
+            // name query
             return new JObject(
                 new JProperty("_source",
                     new JArray(
@@ -119,9 +120,14 @@ namespace FCS.Lib.Virk
                         "Vrvirksomhed.livsforloeb")
                 ),
                 new JProperty("query",
-                    new JObject(new JProperty("term",
-                        new JObject(new JProperty("Vrvirksomhed.virksomhedMetadata.nyesteNavn.navn", query.EntityName))))));
-
+                    new JObject(new JProperty("query_string",
+                        new JObject(
+                            new JProperty("default_field", "Vrvirksomhed.virksomhedMetadata.nyesteNavn.navn"),
+                            new JProperty("query", query.EntityName)
+                            )
+                        )
+                    )), 
+                new JProperty("size", 50));
 
         }
     }
