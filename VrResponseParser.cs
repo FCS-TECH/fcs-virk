@@ -40,9 +40,9 @@ namespace FCS.Lib.Virk
         /// <param name="responseData"></param>
         /// <returns>List of VrVirksomhed models</returns>
         /// <see cref="VrVirksomhed"/>
-        public List<VrVirksomhed?> ParseVrResponse(string responseData)
+        public List<VrVirksomhed> ParseVrResponse(string responseData)
         {
-            var result = new List<VrVirksomhed?>();
+            var result = new List<VrVirksomhed>();
             
             var cvrObject = JObject.Parse(responseData);
             
