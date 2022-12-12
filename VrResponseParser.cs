@@ -62,8 +62,8 @@ namespace FCS.Lib.Virk
                     var jsonString = JsonConvert.SerializeObject(cObject);
 
                     var o = JsonConvert.DeserializeObject<VrVirksomhed>(jsonString);
-
-                    result.Add(o);
+                    if(o != null)
+                        result.Add(o);
                 }
                 catch
                 {
