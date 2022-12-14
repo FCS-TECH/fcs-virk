@@ -105,7 +105,7 @@ namespace FCS.Lib.Virk
                     );
             }
 
-            query.EntityName = query.EntityName.Replace("A/S", "").Trim().Replace(" ", " AND ");
+            query.EntityName = query.EntityName.Replace("A/S", "").Trim().Replace(" ", " AND ").Replace("-", " AND ");
             // name query
             return new JObject(
                 new JProperty("_source",
