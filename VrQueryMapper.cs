@@ -1,25 +1,25 @@
 ﻿// ***********************************************************************
 // Assembly         : FCS.Lib.Virk
-// Author           : FH
-// Created          : 02-21-2022
-//
-// Last Modified By : FH
-// Last Modified On : 02-24-2022
+// Author           : inno
+// Created          : 2022 12 17 13:33
+// 
+// Last Modified By : inno
+// Last Modified On : 2023 03 14 09:16
 // ***********************************************************************
 // <copyright file="VrQueryMapper.cs" company="FCS">
-//    Copyright (C) 2022 FCS Frede's Computer Services.
-//    This program is free software: you can redistribute it and/or modify
-//    it under the terms of the Affero GNU General Public License as
-//    published by the Free Software Foundation, either version 3 of the
-//    License, or (at your option) any later version.
-//
-//    This program is distributed in the hope that it will be useful,
-//    but WITHOUT ANY WARRANTY; without even the implied warranty of
-//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//    Affero GNU General Public License for more details.
-//
-//    You should have received a copy of the Affero GNU General Public License
-//    along with this program.  If not, see [https://www.gnu.org/licenses/agpl-3.0.en.html]
+//     Copyright (C) 2022-2023 FCS Frede's Computer Services.
+//     This program is free software: you can redistribute it and/or modify
+//     it under the terms of the GNU Affero General Public License as
+//     published by the Free Software Foundation, either version 3 of the
+//     License, or (at your option) any later version.
+// 
+//     This program is distributed in the hope that it will be useful,
+//     but WITHOUT ANY WARRANTY; without even the implied warranty of
+//     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//     GNU Affero General Public License for more details.
+// 
+//     You should have received a copy of the GNU Affero General Public License
+//     along with this program.  If not, see [https://www.gnu.org/licenses]
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
@@ -44,7 +44,6 @@ namespace FCS.Lib.Virk
         {
             // lookup based on address
             if (string.IsNullOrWhiteSpace(query.VatNumber) && string.IsNullOrWhiteSpace(query.EntityName))
-            {
                 return new JObject(
                     new JProperty("_source",
                         new JArray(
@@ -80,10 +79,8 @@ namespace FCS.Lib.Virk
                                                 new JProperty("_name", "husnummerFra"))))))
                                 )))))),
                     new JProperty("size", 50));
-            }
             // vat number query
             if (string.IsNullOrWhiteSpace(query.EntityName))
-            {
                 return new JObject(
                     new JProperty("_source",
                         new JArray(
@@ -99,11 +96,10 @@ namespace FCS.Lib.Virk
                             "Vrvirksomhed.livsforloeb")
                     ),
                     new JProperty("query",
-                        new JObject(new JProperty("term", 
+                        new JObject(new JProperty("term",
                             new JObject(new JProperty("Vrvirksomhed.cvrNummer", query.VatNumber))))
-                        )
-                    );
-            }
+                    )
+                );
 
             query.EntityName = query.EntityName.Replace("A/S", "").Trim().Replace(" ", " AND ").Replace("-", " AND ");
             // name query
@@ -123,14 +119,13 @@ namespace FCS.Lib.Virk
                 ),
                 new JProperty("query",
                     new JObject(new JProperty("query_string",
-                        new JObject(
-                            new JProperty("default_field", "Vrvirksomhed.virksomhedMetadata.nyesteNavn.navn"),
-                            new JProperty("query", query.EntityName)
+                            new JObject(
+                                new JProperty("default_field", "Vrvirksomhed.virksomhedMetadata.nyesteNavn.navn"),
+                                new JProperty("query", query.EntityName)
                             )
                         )
-                    )), 
+                    )),
                 new JProperty("size", 50));
-
         }
     }
 }
