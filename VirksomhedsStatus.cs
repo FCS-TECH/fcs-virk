@@ -1,9 +1,9 @@
 ﻿// ***********************************************************************
 // Assembly         : FCS.Lib.Virk
-// Author           : inno
+// Author          : fhdk
 // Created          : 2022 12 17 13:33
 // 
-// Last Modified By : inno
+// Last Modified By: fhdk
 // Last Modified On : 2023 03 14 09:16
 // ***********************************************************************
 // <copyright file="VirksomhedsStatus.cs" company="FCS">
