@@ -26,6 +26,7 @@
 
 using System.Net.Http.Headers;
 using System.Text;
+using FCS.Lib.Common;
 
 namespace FCS.Lib.Virk
 {
@@ -42,8 +43,8 @@ namespace FCS.Lib.Virk
         /// <param name="auth"></param>
         /// <param name="userAgent"></param>
         /// <returns>VrResponseView object</returns>
-        /// <see cref="VrResponseView"/>
-        public async Task<VrResponseView> GetResponseAsync(string endpoint, string jsonData, string auth,
+        /// <see cref="HttpResponseView"/>
+        public async Task<HttpResponseView> GetResponseAsync(string endpoint, string jsonData, string auth,
             string userAgent)
         {
             using var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
@@ -58,7 +59,7 @@ namespace FCS.Lib.Virk
             var response = await client.SendAsync(vrRequest).ConfigureAwait(true);
             var jsonResult = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
 
-            return new VrResponseView
+            return new HttpResponseView
             {
                 Code = response.StatusCode,
                 IsSuccessStatusCode = response.IsSuccessStatusCode,
