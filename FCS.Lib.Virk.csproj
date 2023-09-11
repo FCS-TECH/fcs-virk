@@ -8,10 +8,11 @@
     <Nullable>enable</Nullable>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
     <AssemblyVersion>1.0</AssemblyVersion>
-    <FileVersion>1.0.1.100</FileVersion>
+    <FileVersion>1.0.2.100</FileVersion>
     <IsPublishable>False</IsPublishable>
     <PackageLicenseExpression> AGPL-3.0-or-later</PackageLicenseExpression>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Properties\AssemblyInfo.cs" />
