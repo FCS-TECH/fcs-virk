@@ -1,13 +1,13 @@
 ﻿// ***********************************************************************
 // Assembly         : FCS.Lib.Virk
-// Author          : fhdk
-// Created          : 2022 12 17 13:33
+// Author           : 
+// Created          : 2023 10 01 11:03
 // 
-// Last Modified By: fhdk
-// Last Modified On : 2023 03 14 09:16
+// Last Modified By : root
+// Last Modified On : 2023 10 02 15:23
 // ***********************************************************************
 // <copyright file="VrVatInfoMapper.cs" company="FCS">
-//     Copyright (C) 2022-2023 FCS Frede's Computer Services.
+//     Copyright (C) 2023-2023 FCS Frede's Computer Services.
 //     This program is free software: you can redistribute it and/or modify
 //     it under the terms of the GNU Affero General Public License as
 //     published by the Free Software Foundation, either version 3 of the
@@ -29,20 +29,20 @@ using FCS.Lib.Common;
 namespace FCS.Lib.Virk
 {
     /// <summary>
-    /// Vr Vat Info Mapper
+    ///     Vr Vat Info Mapper
     /// </summary>
     public class VrVatInfoMapper
     {
         /// <summary>
-        /// Vr to CRM mapper
+        ///     Vr to CRM mapper
         /// </summary>
         /// <param name="vrVirk"></param>
         /// <returns>Vat Info Data Transfer Object</returns>
-        /// <see cref="VatInfoDto"/>
-        /// <see cref="VrVirksomhed"/>
-        /// <see cref="VatState"/>
-        /// <see cref="LifeCycle"/>
-        /// <see cref="TimeFrame"/>
+        /// <see cref="VatInfoDto" />
+        /// <see cref="VrVirksomhed" />
+        /// <see cref="VatState" />
+        /// <see cref="LifeCycle" />
+        /// <see cref="TimeFrame" />
         public VatInfoDto MapVrToCrm(VrVirksomhed vrVirk)
         {
             var c = new VatInfoDto

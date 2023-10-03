@@ -1,13 +1,13 @@
 ﻿// ***********************************************************************
 // Assembly         : FCS.Lib.Virk
-// Author          : fhdk
-// Created          : 2022 12 17 13:33
+// Author           : 
+// Created          : 2023 10 01 11:03
 // 
-// Last Modified By: fhdk
-// Last Modified On : 2023 03 14 09:16
+// Last Modified By : root
+// Last Modified On : 2023 10 02 15:23
 // ***********************************************************************
 // <copyright file="VrHttpRequest.cs" company="FCS">
-//     Copyright (C) 2022-2023 FCS Frede's Computer Services.
+//     Copyright (C) 2023-2023 FCS Frede's Computer Services.
 //     This program is free software: you can redistribute it and/or modify
 //     it under the terms of the GNU Affero General Public License as
 //     published by the Free Software Foundation, either version 3 of the
@@ -31,19 +31,19 @@ using FCS.Lib.Common;
 namespace FCS.Lib.Virk
 {
     /// <summary>
-    /// Registrar http request 
+    ///     Registrar http request
     /// </summary>
     public class VrHttpRequest
     {
         /// <summary>
-        /// Async registrar http request
+        ///     Async registrar http request
         /// </summary>
         /// <param name="endpoint"></param>
         /// <param name="jsonData"></param>
         /// <param name="auth"></param>
         /// <param name="userAgent"></param>
         /// <returns>VrResponseView object</returns>
-        /// <see cref="HttpResponseView"/>
+        /// <see cref="HttpResponseView" />
         public async Task<HttpResponseView> GetResponseAsync(string endpoint, string jsonData, string auth,
             string userAgent)
         {

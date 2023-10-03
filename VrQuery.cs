@@ -1,13 +1,13 @@
 ﻿// ***********************************************************************
 // Assembly         : FCS.Lib.Virk
-// Author          : fhdk
-// Created          : 2022 12 17 13:33
+// Author           : 
+// Created          : 2023 10 01 11:03
 // 
-// Last Modified By: fhdk
-// Last Modified On : 2023 03 14 09:16
+// Last Modified By : root
+// Last Modified On : 2023 10 02 15:23
 // ***********************************************************************
 // <copyright file="VrQuery.cs" company="FCS">
-//     Copyright (C) 2022-2023 FCS Frede's Computer Services.
+//     Copyright (C) 2023-2023 FCS Frede's Computer Services.
 //     This program is free software: you can redistribute it and/or modify
 //     it under the terms of the GNU Affero General Public License as
 //     published by the Free Software Foundation, either version 3 of the
@@ -27,32 +27,32 @@
 namespace FCS.Lib.Virk
 {
     /// <summary>
-    /// Registrar query object
+    ///     Registrar query object
     /// </summary>
     public class VrQuery
     {
         /// <summary>
-        /// Vat number
+        ///     Vat number
         /// </summary>
         public string VatNumber { get; set; } = "";
 
         /// <summary>
-        /// Street name
+        ///     Street name
         /// </summary>
         public string StreetName { get; set; } = "";
 
         /// <summary>
-        /// House number
+        ///     House number
         /// </summary>
         public string HouseNumber { get; set; } = "";
 
         /// <summary>
-        /// Zip code
+        ///     Zip code
         /// </summary>
         public string ZipCode { get; set; } = "";
 
         /// <summary>
-        /// Entity name
+        ///     Entity name
         /// </summary>
         public string EntityName { get; set; } = "";
     }

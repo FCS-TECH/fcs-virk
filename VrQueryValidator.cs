@@ -1,13 +1,13 @@
 ﻿// ***********************************************************************
 // Assembly         : FCS.Lib.Virk
-// Author          : fhdk
-// Created          : 2022 12 17 13:33
+// Author           : 
+// Created          : 2023 10 01 11:03
 // 
-// Last Modified By: fhdk
-// Last Modified On : 2023 03 14 09:16
+// Last Modified By : root
+// Last Modified On : 2023 10 02 15:23
 // ***********************************************************************
 // <copyright file="VrQueryValidator.cs" company="FCS">
-//     Copyright (C) 2022-2023 FCS Frede's Computer Services.
+//     Copyright (C) 2023-2023 FCS Frede's Computer Services.
 //     This program is free software: you can redistribute it and/or modify
 //     it under the terms of the GNU Affero General Public License as
 //     published by the Free Software Foundation, either version 3 of the
@@ -27,16 +27,16 @@
 namespace FCS.Lib.Virk
 {
     /// <summary>
-    /// Query validator
+    ///     Query validator
     /// </summary>
     public static class VrQueryValidator
     {
         /// <summary>
-        /// Validate query
+        ///     Validate query
         /// </summary>
         /// <param name="query"></param>
         /// <returns>true or false</returns>
-        /// <see cref="VrQuery"/>
+        /// <see cref="VrQuery" />
         public static bool ValidateVrQuery(VrQuery query)
         {
             try

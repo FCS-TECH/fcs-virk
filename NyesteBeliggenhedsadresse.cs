@@ -1,13 +1,13 @@
 ﻿// ***********************************************************************
 // Assembly         : FCS.Lib.Virk
-// Author          : fhdk
-// Created          : 2022 12 17 13:33
+// Author           : 
+// Created          : 2023 10 01 11:03
 // 
-// Last Modified By: fhdk
-// Last Modified On : 2023 03 14 09:16
+// Last Modified By : root
+// Last Modified On : 2023 10 02 15:23
 // ***********************************************************************
 // <copyright file="NyesteBeliggenhedsadresse.cs" company="FCS">
-//     Copyright (C) 2022-2023 FCS Frede's Computer Services.
+//     Copyright (C) 2023-2023 FCS Frede's Computer Services.
 //     This program is free software: you can redistribute it and/or modify
 //     it under the terms of the GNU Affero General Public License as
 //     published by the Free Software Foundation, either version 3 of the
@@ -27,37 +27,37 @@
 namespace FCS.Lib.Virk
 {
     /// <summary>
-    /// Current address
+    ///     Current address
     /// </summary>
     public class NyesteBeliggenhedsadresse
     {
         /// <summary>
-        /// House number from
+        ///     House number from
         /// </summary>
         public int? HusnummerFra { get; set; }
 
         /// <summary>
-        /// House number to
+        ///     House number to
         /// </summary>
         public int? HusnummerTil { get; set; }
 
         /// <summary>
-        /// Zip code
+        ///     Zip code
         /// </summary>
         public int? Postnummer { get; set; }
 
         /// <summary>
-        /// Street name
+        ///     Street name
         /// </summary>
         public string Vejnavn { get; set; } = "";
 
         /// <summary>
-        /// CO name
+        ///     CO name
         /// </summary>
         public string CoNavn { get; set; } = "";
 
         /// <summary>
-        /// Mail district name
+        ///     Mail district name
         /// </summary>
         public string PostDistrikt { get; set; } = "";
     }

@@ -1,13 +1,13 @@
 ﻿// ***********************************************************************
 // Assembly         : FCS.Lib.Virk
-// Author          : fhdk
-// Created          : 2022 12 17 13:33
+// Author           : 
+// Created          : 2023 10 01 11:03
 // 
-// Last Modified By: fhdk
-// Last Modified On : 2023 03 14 09:16
+// Last Modified By : root
+// Last Modified On : 2023 10 02 15:23
 // ***********************************************************************
 // <copyright file="VrVirksomhed.cs" company="FCS">
-//     Copyright (C) 2022-2023 FCS Frede's Computer Services.
+//     Copyright (C) 2023-2023 FCS Frede's Computer Services.
 //     This program is free software: you can redistribute it and/or modify
 //     it under the terms of the GNU Affero General Public License as
 //     published by the Free Software Foundation, either version 3 of the
@@ -27,32 +27,32 @@
 namespace FCS.Lib.Virk
 {
     /// <summary>
-    /// Business model with registrar
+    ///     Business model with registrar
     /// </summary>
     /// <remarks>JSON property 1-1 relation</remarks>
     public class VrVirksomhed
     {
         /// <summary>
-        /// Vat number
+        ///     Vat number
         /// </summary>
         public string CvrNummer { get; set; } = "";
 
         /// <summary>
-        /// Status list
+        ///     Status list
         /// </summary>
-        /// <see cref="VirksomhedsStatus"/>
+        /// <see cref="VirksomhedsStatus" />
         public List<VirksomhedsStatus> VirksomhedsStatus { get; set; } = new();
 
         /// <summary>
-        /// Meta data
+        ///     Meta data
         /// </summary>
-        /// <see cref="VirksomhedMetadata"/>
+        /// <see cref="VirksomhedMetadata" />
         public VirksomhedMetadata VirksomhedMetadata { get; set; } = new();
 
         /// <summary>
-        /// Company stages
+        ///     Company stages
         /// </summary>
-        /// <see cref="LivsforloebModel"/>
+        /// <see cref="LivsforloebModel" />
         public List<LivsforloebModel> Livsforloeb { get; set; } = new();
     }
 }

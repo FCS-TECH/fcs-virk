@@ -1,13 +1,13 @@
 ﻿// ***********************************************************************
 // Assembly         : FCS.Lib.Virk
-// Author           : fcs
-// Created          : 2022 12 17 13:33
+// Author           : 
+// Created          : 2023 10 01 11:03
 // 
-// Last Modified By : fcs
-// Last Modified On : 2023 03 14 09:16
+// Last Modified By : root
+// Last Modified On : 2023 10 02 15:23
 // ***********************************************************************
 // <copyright file="LivsforloebModel.cs" company="FCS">
-//     Copyright (C) 2022-2023 FCS Frede's Computer Services.
+//     Copyright (C) 2023-2023 FCS Frede's Computer Services.
 //     This program is free software: you can redistribute it and/or modify
 //     it under the terms of the GNU Affero General Public License as
 //     published by the Free Software Foundation, either version 3 of the
@@ -27,19 +27,19 @@
 namespace FCS.Lib.Virk
 {
     /// <summary>
-    /// Lifecycle model
+    ///     Lifecycle model
     /// </summary>
     public class LivsforloebModel
     {
         /// <summary>
-        /// Last registrar update
+        ///     Last registrar update
         /// </summary>
         public string SidstOpdateret { get; set; } = "";
 
         /// <summary>
-        /// Period
+        ///     Period
         /// </summary>
-        /// <see cref="Periode"/>
+        /// <see cref="Periode" />
         public Periode Periode { get; set; } = new();
     }
 }
