@@ -3,7 +3,7 @@
     <LangVersion>10.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
@@ -15,10 +15,14 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Properties\AssemblyInfo.cs" />
+    <None Remove="AssemblyInfo.tt" />
+    <None Remove="Properties\AssemblyInfo.tt" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="AssemblyInfo.tt" />
+    <Content Include="Properties\AssemblyInfo.tt">
+      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NewtonSoft.Json" Version="13.0.3" />
@@ -36,7 +40,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <Compile Update="Properties\AssemblyInfo.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AssemblyInfo.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

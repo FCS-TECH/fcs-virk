@@ -4,11 +4,11 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("FCS.Lib.Virk")]
-[assembly: AssemblyDescription("FCS.Lib.Virk")]
+[assembly: AssemblyTitle("FCS.Lib.Vies")]
+[assembly: AssemblyDescription("FCS.Lib.Vies")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("FCS")]
-[assembly: AssemblyProduct("FCS.Lib.Virk")]
+[assembly: AssemblyProduct("FCS.Lib.Vies")]
 [assembly: AssemblyCopyright("AGPL-3.0-or-later Copyright © FCS 2015-2022")]
 [assembly: AssemblyTrademark("© FCS")]
 [assembly: AssemblyCulture("")]
@@ -16,5 +16,5 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 [assembly: Guid("8D850197-78DB-4D16-A91F-E5BB6E8880A7")]
 
-[assembly: AssemblyVersion("1.0.1.0")]
-[assembly: AssemblyFileVersion("1.0.1.0")]
+[assembly: AssemblyVersion("2.23.1121.0916")]
+[assembly: AssemblyFileVersion("2.23.1121.0916")]
