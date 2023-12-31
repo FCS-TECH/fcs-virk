@@ -16,13 +16,6 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="AssemblyInfo.tt" />
-    <None Remove="Properties\AssemblyInfo.tt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Properties\AssemblyInfo.tt">
-      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
-      <Generator>TextTemplatingFileGenerator</Generator>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NewtonSoft.Json" Version="13.0.3" />
@@ -37,14 +30,6 @@
 
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Properties\AssemblyInfo.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>AssemblyInfo.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
 
 </Project>
