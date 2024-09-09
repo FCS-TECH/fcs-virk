@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <LangVersion>10.0</LangVersion>
+    <ProjectGuid>{6E552538-DC05-4C27-8F2E-530A7927AA04}</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
@@ -21,15 +22,15 @@
     <PackageReference Include="NewtonSoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\fcs-common\FCS.Lib.Common.csproj" />
+    <ProjectReference Include="..\fcs-common\FCS.Lib.Common.csproj">
+      <Project>{3E5FA1AB-44D2-4CBC-B6D7-80B74CA9B265}</Project>
+      <Name>FCS.Lib.Common</Name>
+    </ProjectReference>
   </ItemGroup>
-
   <ItemGroup>
     <Reference Include="System.Net.Http" />
   </ItemGroup>
-
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>
-
 </Project>
