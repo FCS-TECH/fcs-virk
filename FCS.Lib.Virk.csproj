@@ -1,7 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <LangVersion>10.0</LangVersion>
+    <LangVersion>13.0</LangVersion>
     <ProjectGuid>{6E552538-DC05-4C27-8F2E-530A7927AA04}</ProjectGuid>
+    <Platforms>AnyCPU</Platforms>
+    <Configurations>Debug;Dev;Staging;Production</Configurations>
   </PropertyGroup>
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
